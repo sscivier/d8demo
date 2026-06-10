@@ -25,6 +25,7 @@ there are no real datasets.
 
 import argparse
 from collections.abc import Sequence
+from pathlib import Path
 
 import matplotlib.pyplot as plt
 import numpy as np
@@ -52,6 +53,10 @@ _GENERATORS = {
     "cone": cone,
     "hills": random_hills,
 }
+
+#: Default location for the saved figure: alongside this script in examples/,
+#: regardless of the current working directory. PNGs here are gitignored.
+_DEFAULT_OUTPUT = Path(__file__).resolve().parent / "d8demo_example.png"
 
 
 def build_dem(dem_type: str, shape: tuple[int, int], seed: int) -> np.ndarray:
@@ -194,8 +199,8 @@ def _parse_args(argv: Sequence[str] | None) -> argparse.Namespace:
     )
     parser.add_argument(
         "--output",
-        default="d8demo_example.png",
-        help="path to save the figure (default: d8demo_example.png).",
+        default=str(_DEFAULT_OUTPUT),
+        help="path to save the figure (default: examples/d8demo_example.png).",
     )
     parser.add_argument(
         "--dpi",

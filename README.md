@@ -94,13 +94,13 @@ The figure shows, left to right:
 3. **Flow accumulation** — contributing-cell counts on a log colour scale
    (`cmcrameri` `navia_r`) so channels stand out.
 
-By default the figure is saved to `d8demo_example.png` **and** opened in an
-interactive window. Useful flags:
+By default the figure is saved to `examples/d8demo_example.png` **and** opened in
+an interactive window (PNGs in `examples/` are gitignored). Useful flags:
 
 - `--type {plane,valley,pit,cone,hills}` — which DEM to build (default `hills`).
 - `--rows` / `--cols` — grid dimensions (default `60`×`60`).
 - `--seed` — random seed, used only by `--type hills` (default `0`).
-- `--output PATH` — where to save the PNG (default `d8demo_example.png`).
+- `--output PATH` — where to save the PNG (default `examples/d8demo_example.png`).
 - `--dpi` — resolution of the saved PNG (default `150`).
 - `--no-show` — save the figure but do not open a window.
 
