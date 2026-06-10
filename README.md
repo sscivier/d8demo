@@ -8,6 +8,9 @@ routing** and **flow accumulation** on synthetic digital elevation models
 > agent-driven scientific software development. It is intentionally minimal and
 > is **not** a production hydrology package.
 
+New to flow routing? See [`docs/background.md`](docs/background.md) for a short,
+self-contained explanation of DEMs, D8 routing, and flow accumulation.
+
 ## Installation
 
 This project uses [uv](https://docs.astral.sh/uv/). With the repository cloned:
