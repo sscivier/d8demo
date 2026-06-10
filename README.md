@@ -65,6 +65,30 @@ Tiny, deterministic surfaces whose flow patterns are easy to reason about:
   follows it downhill, tallying how many cells drain through each cell
   (including itself, so the minimum value is 1).
 
+### Running the example
+
+An end-to-end example script lives in `examples/`. It builds one synthetic DEM,
+routes flow with D8, accumulates it, and produces a three-panel figure:
+
+1. **DEM** — the elevation surface.
+2. **D8 flow directions** — an arrow per cell pointing to its steepest-descent
+   neighbour, with outlets marked in red.
+3. **Flow accumulation** — how many cells drain through each cell, log-scaled so
+   small tributaries stay visible next to large channels.
+
+Run it from the repository root, choosing the DEM type and grid size:
+
+```bash
+uv run python examples/flow_demo.py --dem pit --rows 9 --cols 9
+uv run python examples/flow_demo.py --dem ridge --rows 11 --cols 11
+uv run python examples/flow_demo.py --dem random_hills --rows 21 --cols 21 --seed 3
+```
+
+The figure is saved to `examples/flow_demo.png` (override with `--output`) and
+also shown in a window; pass `--no-show` to save only (e.g. when running
+headless). `pit` and `ridge` are clearest with **odd** row/column counts, which
+keep their centre on a single cell. See `--help` for all flags.
+
 ### Scientific assumptions
 
 These keep the demo small and predictable (it is **not** production hydrology):

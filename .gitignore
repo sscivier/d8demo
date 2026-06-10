@@ -1,3 +1,6 @@
+# Generated demo figures from examples/flow_demo.py
+examples/*.png
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[codz]
