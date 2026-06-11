@@ -8,6 +8,8 @@ routing** and **flow accumulation** on synthetic digital elevation models
 > agent-driven scientific software development. It is intentionally minimal and
 > is **not** a production hydrology package.
 
+> **Status:** The final seminar solution has been merged into `main`.
+
 New to flow routing? See [`docs/background.md`](docs/background.md) for a short,
 self-contained explanation of DEMs, D8 routing, and flow accumulation.
 
